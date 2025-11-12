@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Set Operations</title>
+</head>
+<body>
+  <h1>Set Operations</h1>
+  <script>
+    let setA = new Set([1, 2, 3, 4, 5]);
+    let setB = new Set([6, 7, 8, 9, 10]);
+
+    // Union
+    let union = new Set([...setA, ...setB]);
+
+    // Intersection
+    let intersection = new Set([...setA].filter(x => setB.has(x)));
+
+    // Differences
+    let diff_a = new Set([...setA].filter(x => !setB.has(x)));
+    let diff_b = new Set([...setB].filter(x => !setA.has(x)));
+
+    // Display results neatly
+    document.write("Set A: " + [...setA] + "<br>");
+    document.write("Set B: " + [...setB] + "<br><br>");
+    document.write("Union (A ∪ B): " + [...union] + "<br>");
+    document.write("Intersection (A ∩ B): " + [...intersection] + "<br>");
+    document.write("Difference (A - B): " + [...diff_a] + "<br>");
+    document.write("Difference (B - A): " + [...diff_b] + "<br>");
+  </script>
+</body>
+</html>
+
+
