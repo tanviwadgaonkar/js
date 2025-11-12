@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+</head>
+<body>
+
+<h2>Countdown Timer</h2>
+
+Enter seconds: <input id="seconds" type="number"><br><br>
+<button onclick="startTimer()">Start Countdown</button>
+
+<p id="timer"></p>
+
+<script>
+function startTimer() {
+  var timeLeft = parseInt(document.getElementById("seconds").value);
+
+  if (isNaN(timeLeft) || timeLeft <= 0) {
+    document.getElementById("timer").innerHTML = "Please enter a valid positive number";
+    return;
+  }
+
+  var timerDisplay = document.getElementById("timer");
+  timerDisplay.innerHTML = timeLeft + " seconds remaining";
+
+  var countdown = setInterval(function() {
+    timeLeft--;
+    timerDisplay.innerHTML = timeLeft + " seconds remaining";
+
+    if (timeLeft <= 0) {
+      clearInterval(countdown);
+      timerDisplay.innerHTML = "Time's up!";
+    }
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
