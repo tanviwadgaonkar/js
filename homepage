@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Homepage</title>
+</head>
+<body onmouseover="ChangeColor()" onmouseout="ResetColor()">
+  <h1>Welcome to My Homepage</h1>
+  <p>Hover your mouse or click inside the box to change the background color.</p>
+
+  <input type="text" id="name" placeholder="Click here" onfocus="FocusColor()" onblur="ResetColor()">
+
+  <script>
+    function ChangeColor() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+
+    function FocusColor() {
+      document.body.style.backgroundColor = "lightgreen";
+    }
+
+    function ResetColor() {
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
