@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Operations</title>
+</head>
+<body>
+
+  <h2>String Operations</h2>
+
+  Enter a string: <input id="str"><br><br>
+  Character to replace: <input id="oldChar"><br>
+  Replace with: <input id="newChar"><br><br>
+
+  <button onclick="operateString()">Perform Operations</button>
+
+  <p id="result"></p>
+
+  <script>
+    function operateString() {
+      var s = document.getElementById("str").value;
+      var oldChar = document.getElementById("oldChar").value;
+      var newChar = document.getElementById("newChar").value;
+
+      // Reverse the string
+      var reversed = s.split('').reverse().join('');
+
+      // Replace characters
+      var replaced = s.split(oldChar).join(newChar);
+
+      // Check palindrome (ignore case)
+      var palindrome = (s.toLowerCase() === reversed.toLowerCase());
+
+      // Display results
+      document.getElementById('result').innerHTML =
+        "Reversed String: " + reversed + "<br>" +
+        "Replaced String: " + replaced + "<br>" +
+        "Is Palindrome? " + (palindrome ? "Yes" : "No");
+    }
+  </script>
+
+</body>
+</html>
