@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculate Area</title>
+</head>
+<body>
+
+  <p>Enter Height and Base:</p>
+  Height: <input id="height"><br>
+  Base: <input id="base"><br>
+
+  <p>Enter Length and Width:</p>
+  Length: <input id="length"><br>
+  Width: <input id="width"><br>
+
+  <p>Enter Radius of Circle:</p>
+  Radius: <input id="radius"><br><br>
+
+  <button onclick="CalculateArea()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function CalculateArea() {
+      var h = document.getElementById("height").value;
+      var b = document.getElementById("base").value;
+      var l = document.getElementById("length").value;
+      var w = document.getElementById("width").value;
+      var r = document.getElementById("radius").value;
+
+      var areatriangle = 0.5 * h * b;
+      var rectangle = l * w;
+      var circle = 3.14 * r * r;
+
+      document.getElementById("result").innerHTML =
+        "Area of Triangle: " + areatriangle + "<br>" +
+        "Area of Rectangle: " + rectangle + "<br>" +
+        "Area of Circle: " + circle;
+    }
+  </script>
+
+</body>
+</html>
