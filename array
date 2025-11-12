@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Operations</title>
+</head>
+<body>
+
+<h2>Array Operations</h2>
+
+<script>
+  // Create an array
+  var arr = [1, 2, 3, 4, 5];
+  document.write("Original Array: " + arr + "<br>");
+
+  // Remove a specific element (e.g., 3)
+  var valueToRemove = 3;
+  var index = arr.indexOf(valueToRemove);
+  if (index !== -1) {
+    arr.splice(index, 1);
+  }
+  document.write("Array after removing " + valueToRemove + ": " + arr + "<br>");
+
+  // Check if array contains a value (e.g., 4)
+  var checkValue = 4;
+  var contains = arr.includes(checkValue) ? "Yes" : "No";
+  document.write("Does array contain " + checkValue + "? " + contains + "<br>");
+
+  // Empty the array
+  arr.length = 0;
+  document.write("Array after emptying: " + arr);
+</script>
+
+</body>
+</html>
+
+
